@@ -32,7 +32,7 @@
 
 <p>Minikube быстро настраивает локальный кластер Kubernetes в macOS, Linux и Windows. Примените манифесты, выполните следующие команды:</p>
 
-<kubectl apply -f ./deploy>
+<code><kubectl apply -f ./deploy></code>
 
 <p>Примените этот helm, если в вашем миникубе нет ingress-nginx:</p>
 
@@ -40,4 +40,4 @@
 
 <p>Для проверки Arch.homework, выполните следующие команды:</p>
 
-<code>curl -L '<http://arch.homework/health'<code>
+<code>curl -L '<http://arch.homework/health'</code>
