@@ -38,5 +38,5 @@ helm install nginx --create-namespace -n ingress-nginx ingress-nginx/ingress-ngi
 <p>Для проверки Arch.homework, выполните следующие команды:</p>
 
 ```sh
-curl -L '<http://arch.homework/health'
+curl -L 'http://arch.homework/health'
 ```
