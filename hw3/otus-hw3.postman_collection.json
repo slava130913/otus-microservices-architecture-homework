@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "7367d0dc-0a2e-47fa-98cd-172ce5b5288f",
+		"name": "otus-hw3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"iivanov\",\n    \"firstName\": \"ivan\",\n    \"lastName\": \"ivanov\",\n    \"email\": \"ivanov@mail.me\",\n    \"phone\": \"+9993331111\"\n}"
+				},
+				"url": {
+					"raw": "http://arch.homework/user",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Username 1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/user/4",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"iivanov\",\n    \"firstName\": \"ivanovishe\",\n    \"lastName\": \"ivanov\",\n    \"email\": \"ivanov.ddm@mail.me\",\n    \"phone\": \"+9993331111\"\n}"
+				},
+				"url": {
+					"raw": "http://arch.homework/user/4",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"4"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "abracadabra",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/user/4",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "72c0445f-27a0-4050-bc09-bf303279a4ab",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "04e3f763-18b5-4c62-a302-3d640af60364",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
