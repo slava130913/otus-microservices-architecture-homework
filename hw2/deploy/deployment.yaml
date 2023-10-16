@@ -14,24 +14,10 @@ spec:
     spec:
       containers:
         - name: otus
-          image: snaiperlfc/otus-homework:0.0.8-SNAPSHOT
+          image: slava1309/microservice-architecture:v1.0
           imagePullPolicy: Always
           ports:
-            - containerPort: 8000
-          envFrom:
-            - configMapRef:
-                name: otus-config
-          env:
-            - name: SPRING_DATASOURCE_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: pg-secret
-                  key: username
-            - name: SPRING_DATASOURCE_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: pg-secret
-                  key: password
+            - containerPort: 8000         
           readinessProbe:
             httpGet:
               path: /health
