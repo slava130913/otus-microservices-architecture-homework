@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "6a8b7ae5-aeb5-4e63-a26c-f1a80c42ae94",
+		"name": "otus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "arch.homework/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/health",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}		
+	],
+	"protocolProfileBehavior": {}
+}
