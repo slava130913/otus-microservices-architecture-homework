@@ -3,7 +3,7 @@ replicaCount: 1
 application:
   deployment:
     pod:
-      repository: vvkoles7/hw3
+      repository: slava1309/hw3
       pullPolicy: Never
       tag: v2
       port: 80
