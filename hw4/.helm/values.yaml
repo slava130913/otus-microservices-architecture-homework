@@ -1,0 +1,29 @@
+replicaCount: 3
+
+application:
+  deployment:
+    pod:
+      repository: slava130913/hw04
+      pullPolicy: Never
+      tag: v1
+      port: 80
+  service:
+    type: NodePort
+    port: 8000
+
+external:
+  postgres:
+    replicaCount: 1
+    image:
+      repository: postgres
+      tag: latest
+    access:
+      host: otus-hw04-postgres
+      port: "5432"
+      user: myuser
+      pass: passwd
+      db: myapp
+
+metrics:
+  serviceMonitor:
+    enabled: true
