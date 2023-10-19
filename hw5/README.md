@@ -1,12 +1,12 @@
-## Installation
+## Установка
 
-Setup Istio
+Настройка Istio
 
 ```shell
 istioctl install --set profile.html=default -y
 ```
 
-Setup application deployments
+Настройка развертывания приложений
 ```shell
 ./launch.sh
 ```
@@ -29,30 +29,30 @@ helm install --set auth.strategy="anonymous" kiali-server kiali/kiali-server --v
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.12/samples/addons/kiali.yaml
 ```
 
-### Additional
+### Дополнительно
 
-Add SideCar to namespace `monitoring` pods
+Добавьте SideCar в модули мониторинга пространства имен.
 
 ```shell
 kubectl label namespace monitoring istio-injection=enabled --overwrite
 ```
 
-### Send requests
+### Отправить запросы
 
-Get access to service
+Получить доступ к сервису
 
 ```shell
 minikube service -n istio-system istio-ingressgateway
 ```
 
-Send several requests (just refresh page)
+Отправьте несколько запросов (просто обновите страницу)
 
-### Result
+### Результат
 
 ```shell
 istioctl dashboard kiali
 ```
 
-Traffic management screenshot
+Скриншот управления трафиком
 
 ![](kiali-dashboard.png)
