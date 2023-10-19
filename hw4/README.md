@@ -22,7 +22,8 @@
 - RPS
 - Error Rate - количество 500ых ответов
 
-![ingress-part.png](images/ingress-part.png)
+![ingress-part1.png](images/ingress-part1.png)
+![ingress-part2.png](images/ingress-part2.png)
 
 --- 
 
