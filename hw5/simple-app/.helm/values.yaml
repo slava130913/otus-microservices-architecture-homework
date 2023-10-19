@@ -1,0 +1,21 @@
+deployment:
+  version1:
+    replicaCount: 1
+    image:
+      repository: slava1309/hw5
+      tag: v1
+      pullPolicy: Never
+    container:
+      port: 80
+  version2:
+    replicaCount: 1
+    image:
+      repository: slava1309/hw5
+      tag: v2
+      pullPolicy: Never
+    container:
+      port: 80
+
+service:
+  type: NodePort
+  port: 8080
