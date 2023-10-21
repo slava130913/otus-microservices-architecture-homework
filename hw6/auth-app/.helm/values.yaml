@@ -1,0 +1,23 @@
+replicaCount: 1
+
+application:
+  deployment:
+    pod:
+      repository: slava1309/hw6
+      pullPolicy: Never
+      tag: v1
+      port: 80
+  service:
+    type: LoadBalancer
+    port: 8080
+
+postgresql:
+  enabled: true
+  postgresqlUsername: myuser
+  postgresqlPassword: passwd
+  postgresqlDatabase: myapp
+  service:
+    port: "5432"
+
+external:
+  user_service: http://otus-hw05-user-app-service.default.svc.cluster.local:8000
