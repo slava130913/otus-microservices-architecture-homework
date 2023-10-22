@@ -1,0 +1,27 @@
+application:
+  image:
+    repository: slava1309/hw7-notification-app
+    pullPolicy: Never
+    tag: v1
+  deployment:
+    replicaCount: 1
+    pod:
+      port: 80
+  service:
+    type: LoadBalancer
+    port: 8083
+consumer:
+  image:
+    repository: slava1309/otus-hw7-notification-consumer
+    pullPolicy: Never
+    tag: v1
+  deployment:
+    replicaCount: 1
+postgresql:
+  host: notification-db-postgresql.otus-hw7.svc.cluster.local
+  username: postgres
+  password: postgres
+  database: notification
+  port: "5432"
+kafka:
+  dns: kafka.otus-hw06.svc.cluster.local:9092
