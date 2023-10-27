@@ -1,0 +1,25 @@
+application:
+  deployment:
+    pod:
+      repository: slava1309/otus-hw7-user-app
+      pullPolicy: Never
+      tag: v3
+      port: 80
+      replicaCount: 1
+  service:
+    type: LoadBalancer
+    port: 8080
+
+postgresql:
+  host: user-db-postgresql.otus-hw7.svc.cluster.local
+  port: "5432"
+  username: postgres
+  password: postgres
+  database: users
+
+metrics:
+  serviceMonitor:
+    enabled: true
+
+external:
+  billing: http://billing-app-billing-service.otus-hw7.svc.cluster.local:8081
