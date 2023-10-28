@@ -1,3 +1,18 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: postgress-users
+spec:
+  selector:
+    matchLabels:
+      app: postgress
+  maxUnavailable: 1
+---
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: postgress
+externalAccess:
 auth:
   username: postgres
   postgresPassword: postgres

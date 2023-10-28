@@ -1,3 +1,18 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: postgress-orders
+spec:
+  selector:
+    matchLabels:
+      app: postgress
+  maxUnavailable: 1
+---
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: postgress
+
 auth:
   username: postgres
   postgresPassword: postgres
@@ -11,3 +26,34 @@ metrics:
   enabled: true
   serviceMonitor:
     enabled: true
+
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        service: LoadBalancer
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:10.1
+          ports:
+            - containerPort: 5432
+          env:
+            - name: postgres
+              value: postgres
+            - name: postgres
+              value: postgres
+            - name: postgres
+              value: postgres
+          volumeMounts:
+            - mountPath: "/var/lib/postgresql/data"
+              name: "mendix-pgdata"
+      volumes:
+        - hostPath:
+            path: "/home/docker/pgdata"
+          name: mendix-pgdata
