@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   contact:
-    email: murod.haydarov@gmail.com
-  title: Домашнее задание №7
+    email: vvkoles7@mts.ru
+  title: Проектаная работа
   version: 0.1.0
 servers:
   - url: http://arch.homework

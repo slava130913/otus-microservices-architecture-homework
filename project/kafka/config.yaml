@@ -1,8 +1,17 @@
-kind: Ingress
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
 metadata:
-  name: ingress-srv
-  annotations:
-    kubernetes.io/ingress.class: kafka
+  name: kafka-pdb
+spec:
+  selector:
+    matchLabels:
+      app: kafka
+  maxUnavailable: 1
+---
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: kafka
 externalAccess:
   enabled: true
   service:
