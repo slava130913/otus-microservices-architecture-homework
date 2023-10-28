@@ -34,10 +34,6 @@
 - Сервис «Заказов»
 - Сервис «Уведомлений»
 
-## Спецификация OpenAPI
-
-[OpenAPI.yaml]https://github.com/slava130913/otus-microservices-architecture-homework/blob/master/project/api-spec/static/open-api.yaml)
-
 ## Общая схема
 
 ![](screen1.png)
@@ -45,6 +41,12 @@
 
 ## Схема взаимодействия
 ![](structure.png)
+
+## Спецификация OpenAPI
+
+[OpenAPI spec](./api-spec/static/open-api.yaml)
+
+![](swagger.png)
 
 ---
 ### Сервис «Пользователи»
